@@ -2,4 +2,48 @@ body {
     background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     height: 100vh;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: white;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    width: 70%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.img-section {
+    width: 50%;
+    height: 100%;
+}
+
+.box-img {
+    position: absolute;
+}
+
+.woman-img {
+    width: 100%;
+    height: auto;
+}
+
+.faq-section {
+    width: 50%;
+}
+
