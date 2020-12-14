@@ -1,3 +1,9 @@
+html {
+    font-size: 12px;
+    font-family: Kumbh Sans, sans-serif;
+    font-weight: 400;
+}
+
 body {
     background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     height: 100vh;
@@ -9,6 +15,10 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+p {
+    margin: 0;
 }
 
 .container {
@@ -24,9 +34,14 @@ body {
     border-radius: 15px;
     background-color: white;
     background-image: url("./images/bg-pattern-desktop.svg");
-    width: 70%;
+    background-repeat: no-repeat;
+    background-size: 88%;
+    background-position-x: -445px;
+    background-position-y: -240px;
+    width: 900px;
     height: 500px;
     margin: 0 auto;
+    box-shadow: 0px 10px 10px hsl(238, 29%, 16%);
 }
 
 .img-section {
@@ -35,15 +50,90 @@ body {
 }
 
 .box-img {
-    position: absolute;
+    position: relative;
+    top: 190px;
+    left: -94px;
+    z-index: 1;
 }
 
 .woman-img {
+    position: relative;
+    bottom: 100px;
+    left: -65px;
     width: 100%;
     height: auto;
+    z-index: 0;
 }
 
 .faq-section {
-    width: 50%;
+    width: 450px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 55;
+}
+
+.title-container {
+    flex-grow: 45;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    color: hsl(238, 29%, 16%);
+    font-size: 2.5em;
+}
+
+.faq {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    width: 85%;
+    color: hsl(238, 29%, 16%);
+}
+
+.question {
+    display: inline-block;
+    margin: 1em 0;
+    width: 97%;
+}
+
+.faq:hover {
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.down-arrow {
+    position: relative;
+    float: right;
+    margin-top: 1em;
+    width: 3%;
+    transition: all 0.3s ease-in-out;
+}
+
+.answer {
+    margin-bottom: 1em;
+    height: 0;
+    overflow: hidden;
+    color: hsl(240, 6%, 50%);
+    transition: 0.3s ease-in-out;
+}
+
+.answer.open {
+    height: 35px;
+}
+
+.down-arrow.open {
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.question.open {
+    font-weight: 700;
+}
