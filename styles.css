@@ -1,4 +1,165 @@
-body {
-    margin: 0;
+/* general stylings */
+
+
+
+*, *::after, *::before {
+	box-sizing: border-box;
 }
 
+html {
+	font-size: 13px;
+	font-family: "Barlow Semi Condensed", serif;
+	font-weight: 500;
+}
+
+body {
+    margin: 0;
+    background-color:hsl(210, 46%, 95%);
+}
+
+
+
+/* class specific stylings */
+
+
+
+.container {
+	display: grid;
+	grid-gap: 1.5em;
+	width: 75%;
+	margin: 5em auto;
+}
+
+.card {
+	padding: 2em;
+	border-radius: 0.5em;
+	box-shadow: 2px 2px 5px 5px rgb(207, 207, 207, 0.5);
+}
+
+.name {
+	font-size: 1.1em;
+	margin-bottom: 0.2em;
+}
+
+.verified {
+	margin-top: 0;
+	opacity: 0.5;
+}
+
+.quote-feature {
+	font-size: 1.8em;
+}
+
+.quote {
+	opacity: 0.7;
+	line-height: 1.5em;
+}
+
+
+
+/* name specific designs */
+
+
+
+.daniel {
+	background-image: url("./images/bg-pattern-quotation.svg");
+	background-repeat: no-repeat;
+	background-position: top left 90%;
+	background-color: hsl(263, 55%, 52%);
+}
+
+.daniel, .jonathan, .patrick {
+	color: hsl(210, 46%, 95%);
+}
+
+.jonathan {
+	background-color: hsl(217, 19%, 35%);
+}
+
+.jeanette, .kira {
+	background-color: white;
+	color:hsl(219, 29%, 14%);
+}
+
+.patrick {
+	background-color: hsl(219, 29%, 14%);
+}
+
+.title {
+	padding-left: 50px;
+	position: relative;
+}
+
+.title::before {
+	content: '';
+	height: 35px;
+	width: 35px;
+	background-size: cover;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+}
+
+.daniel .title::before {
+	background-image: url("./images/image-daniel.jpg");
+}
+
+.jonathan .title::before {
+	background-image: url("./images/image-jonathan.jpg");
+}
+
+.jeanette .title::before {
+	background-image: url("/images/image-jeanette.jpg");
+}
+
+.patrick .title::before {
+	background-image: url("./images/image-patrick.jpg");
+	border: 2px solid hsl(263, 55%, 52%);
+}
+
+.kira .title::before {
+	background-image: url("./images/image-kira.jpg");
+}
+
+
+/* Media query for more than 768 */
+
+@media (min-width: 768px) {
+	.container {
+		grid-template: repeat(2, 1fr) / repeat(4, 1fr)
+	}
+
+	.card {
+		padding: 1.5em
+	}
+
+	.quote-feature {
+		font-size: 1.5em;
+	}
+
+	.daniel {
+		grid-column: 1 / span 2;
+		grid-row: 1 /span 1;
+	}
+
+	.jonathan {
+		grid-column: 3 / span 1;
+		grid-row: 1 / span 1;
+	}
+
+	.kira {
+		grid-column: 4 / span 1;
+		grid-row: 1 / span 2;
+	}
+
+	.patrick {
+		grid-column: 2 / span 2;
+		grid-row: 2 / span 1;
+	}
+
+	.jeanette {
+		grid-column: 1 / span 1;
+		grid-row: 2 / span 1;
+	}
+}
