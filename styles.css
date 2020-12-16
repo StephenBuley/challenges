@@ -39,7 +39,7 @@ p {
     background-position-x: -445px;
     background-position-y: -240px;
     width: 900px;
-    height: 500px;
+    height: 550px;
     margin: 0 auto;
     box-shadow: 0px 10px 10px hsl(238, 29%, 16%);
 }
@@ -123,17 +123,17 @@ p {
     transition: 0.3s ease-in-out;
 }
 
-.answer.open {
-    height: 35px;
-}
-
-.down-arrow.open {
+.open .down-arrow {
     -o-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
-.question.open {
+.open .answer {
+    height: 42px;
+}
+
+.open .question {
     font-weight: 700;
 }
