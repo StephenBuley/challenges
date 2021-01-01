@@ -1,4 +1,5 @@
 const toggle = document.querySelector("input")
+const slider = document.querySelector(".slider")
 const body = document.querySelector("body")
 
 
@@ -19,3 +20,7 @@ function makeDark() {
 }
 
 toggle.addEventListener("click", darkModeToggle)
+slider.addEventListener("keypress", () => {
+    toggle.checked = !toggle.checked
+    darkModeToggle()
+})
