@@ -16,6 +16,15 @@ body {
     padding: 0;
 }
 
+.dark {
+    background-color: hsl(230, 17%, 14%);
+    color: white;
+}
+
+.dark::before {
+    background: hsl(232, 19%, 15%);
+}
+
 .container {
     margin: 2em auto;
     width: 85%;
@@ -27,6 +36,19 @@ body {
 /* Header stylings */
 
 
+
+body::before {
+    content: '';
+    height: 33vh;
+    background: hsl(225, 100%, 98%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: -1;
+}
 
 .header {
     position: relative;
@@ -53,8 +75,18 @@ body {
 .toggle,
 .username,
 .grid-two-title,
-.stat-title {
-    color: hsl(228, 12%, 44%)
+.stat-title,
+.followers {
+    color: hsl(228, 12%, 44%);
+}
+
+.dark .subtitle,
+.dark .toggle,
+.dark .username,
+.dark .grid-two-title,
+.dark .stat-title,
+.dark .followers {
+    color:hsl(228, 34%, 66%);
 }
 
 
@@ -129,6 +161,19 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.dark .card {
+    background-color: hsl(228, 28%, 20%);
+}
+
+.card:hover {
+    background-color: hsl(227, 47%, 90%);
+    cursor: pointer;
+}
+
+.dark .card:hover {
+    background-color: hsl(228, 28%, 30%);
 }
 
 .follow-stat-block {
