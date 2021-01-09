@@ -39,7 +39,7 @@ body {
 
 body::before {
     content: '';
-    height: 33vh;
+    height: 213px;
     background: hsl(225, 100%, 98%);
     position: absolute;
     top: 0;
@@ -161,6 +161,7 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .dark .card {
@@ -315,4 +316,46 @@ input:checked + .slider:before {
 .youtube-likes .stat-change::before, .youtube-views .stat-change::before {
     background-image: url("./images/icon-down.svg");
     transform: rotate(135deg);
+}
+
+@media (min-width: 1068px) {
+    .container {
+        max-width: 1000px
+    }
+    
+    .grid {
+        display: grid;
+        justify-content: space-between;
+    }
+
+    .one {
+        grid-template-columns: repeat(4, 23%);
+    }
+
+    .two {
+        grid-template-columns: repeat(4, 23%);
+        grid-template-rows: repeat(2, 50%);
+    }
+
+    .card-small {
+        margin: 0.6em auto;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-content {
+        border: none;
+        width: 85%;
+    }
+
+    .toggle {
+        width: 15%;
+    }
+
+    .card-big {
+        margin-top: 0;
+    }
 }
