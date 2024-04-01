@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Heebo';
+  src: url('./heebo-v21-latin-500.woff2');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Heebo';
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  font-family: 'Barlow', sans-serif;
+}
