@@ -17,6 +17,11 @@ html {
 
 body {
   margin: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(101, 100%, 97%),
+    hsl(101, 21%, 70%)
+  );
 }
 
 .container {
